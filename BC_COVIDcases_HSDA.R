@@ -72,7 +72,7 @@ ui <- fluidPage(
   p("Also note: HSDA-level data is not released every day. To find your HSDA, see https://catalogue.data.gov.bc.ca/dataset/health-service-delivery-area-boundaries"),
   h5("Code"),
   p("Code used to generate this visualization tool is available on Github https://github.com/markjohnsonubc/COVID-19_cases_BC_HSDA."),
-  p("Visualization prepared by Mark Johnson. Twitter: @ecohydrologist")
+  p("Visualization prepared by Mark Johnson, University of British Columbia. Twitter: @ecohydrologist")
 )
 
 
@@ -96,7 +96,7 @@ server <- function(input, output) {
         labs(
           x = "",
           y = "Daily cases per 100,000 people",
-          title = paste0("COVID-19 cases, ", {input$hsda}," HSDA"),
+          title = paste0("Daily COVID-19 cases, ", {input$hsda}," HSDA"),
           subtitle = dataDate
         ) 
       girafe(ggobj = p)
