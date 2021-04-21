@@ -66,12 +66,13 @@ ui <- fluidPage(
   ),
   h5("Info:"),
   p("The most localized publically-available COVID-19 case numbers for British Columbia are at the HSDA level."),
+  p("To find your HSDA, see https://catalogue.data.gov.bc.ca/dataset/health-service-delivery-area-boundaries"),
   h5("Data sources:"),
   p("COVID-19 cases by HSDA: http://www.bccdc.ca/Health-Info-Site/Documents/BCCDC_COVID19_Regional_Summary_Data.csv"),
   p("Graphed as cases per 100k people based on HSDA-level population data from: https://bcstats.shinyapps.io/popApp/"),
   p("Note: 7-day moving average data by HSDA available at https://bccdc.shinyapps.io/covid19_global_epi_app"),
-  p("Also note: HSDA-level data are not released every day. To find your HSDA, see https://catalogue.data.gov.bc.ca/dataset/health-service-delivery-area-boundaries"),
-  h5("Code"),
+  p("Also note: HSDA-level data are not released every day."),
+  h5("Code:"),
   p("Code used to generate this visualization tool is available on ", a("Github.",href = "https://github.com/markjohnsonubc/COVID-19_cases_BC_HSDA", target="_blank")),
   p("Visualization prepared by Mark Johnson, University of British Columbia. Twitter: ", a("@ecohydrologist",href = "https://twitter.com/ecohydrologist", target="_blank"))
 )

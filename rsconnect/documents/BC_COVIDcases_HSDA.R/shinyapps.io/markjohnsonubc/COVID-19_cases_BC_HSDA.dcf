@@ -5,10 +5,10 @@ account: markjohnsonubc
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4008447
-bundleId: 4501870
+bundleId: 4502274
 url: https://markjohnsonubc.shinyapps.io/COVID-19_cases_BC_HSDA/
-when: 1619038157.68256
-lastSyncTime: 1619038157.68258
+when: 1619044609.86271
+lastSyncTime: 1619044609.86273
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: Population_Estimates_HSDA_2019.csv|README.md
+ignoredFiles: Population_Estimates_HSDA_2019.csv|README.md|hsda_2018
