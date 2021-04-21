@@ -34,7 +34,6 @@ ui <- fluidPage(
   tags$head( tags$style(type="text/css", "text {font-family: sans-serif}")),
   
   titlePanel("COVID-19 cases by BC Health Service Delivery Area (HSDA)"),
-  p("The most localized COVID-19 case numbers for British Columbia are available at the HSDA level."),
   
   sidebarLayout(
     sidebarPanel( 
@@ -65,6 +64,8 @@ ui <- fluidPage(
       girafeOutput(outputId = "colPlot")
     )
   ),
+  h5("Info:"),
+  p("The most localized COVID-19 case numbers for British Columbia are available at the HSDA level."),
   h5("Data sources:"),
   p("COVID-19 cases by HSDA: http://www.bccdc.ca/Health-Info-Site/Documents/BCCDC_COVID19_Regional_Summary_Data.csv"),
   p("Graphed as cases per 100k people based on HSDA-level population data from: https://bcstats.shinyapps.io/popApp/"),
