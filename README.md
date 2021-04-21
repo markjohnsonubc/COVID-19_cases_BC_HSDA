@@ -5,5 +5,5 @@ Data can be viewed at https://markjohnsonubc.shinyapps.io/COVID-19_cases_BC_HSDA
 
 Code is posted in BC_COVIDcases_HSDA.R
 
-DOI: 10.5281/zenodo.4708361
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.4708361.svg)](http://dx.doi.org/10.5281/zenodo.4708361)
 
