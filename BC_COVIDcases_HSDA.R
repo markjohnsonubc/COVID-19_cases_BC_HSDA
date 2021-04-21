@@ -33,7 +33,7 @@ ui <- fluidPage(
   theme = shinytheme("cerulean"),
   tags$head( tags$style(type="text/css", "text {font-family: sans-serif}")),
   
-  titlePanel("COVID-19 cases by BC Health Service Delivery Area"),
+  titlePanel("COVID-19 cases by BC Health Service Delivery Area (HSDA)"),
   p("The most localized COVID-19 case numbers for British Columbia are available at the HSDA level."),
   
   sidebarLayout(
@@ -45,7 +45,7 @@ ui <- fluidPage(
         choices = HSDAs,
         selected = "Vancouver"
       ),
-      helpText(p("(Health Service Delivery Area)")),
+      helpText(p("Health Service Delivery Area")),
       hr(),
       helpText(tags$h4("Select date range")),
         dateRangeInput(
@@ -58,17 +58,23 @@ ui <- fluidPage(
         format = "yyyy-mm-dd",
         separator = " - "
       ),
-      helpText(p("(default Feb 1, 2021 - present)\n(max Jan 29, 2020 - present)")),
+      helpText(p("default Feb 1, 2021 - present")),
+      helpText(p("max Jan 29, 2020 - present")),
     ),
     mainPanel(
       girafeOutput(outputId = "colPlot")
     )
   ),
-    h5("Data sources:"),
+  h5("Data sources:"),
   p("COVID-19 cases by HSDA: http://www.bccdc.ca/Health-Info-Site/Documents/BCCDC_COVID19_Regional_Summary_Data.csv"),
-  p("Graphed as cases per 100k people based on HSDA population data from: https://bcstats.shinyapps.io/popApp/"),
-  p("Note: 7-day moving average data by HSDA available at https://bccdc.shinyapps.io/covid19_global_epi_app/")
+  p("Graphed as cases per 100k people based on HSDA-level population data from: https://bcstats.shinyapps.io/popApp/"),
+  p("Note: 7-day moving average data by HSDA available at https://bccdc.shinyapps.io/covid19_global_epi_app/"),
+  p("Also note: HSDA-level data is not released every day. To find your HSDA, see https://catalogue.data.gov.bc.ca/dataset/health-service-delivery-area-boundaries"),
+  h5("Code"),
+  p("Code used to generate this visualization tool is available on Github https://github.com/markjohnsonubc/COVID-19_cases_BC_HSDA."),
+  p("Visualization prepared by Mark Johnson. Twitter: @ecohydrologist")
 )
+
 
 # Define server logic ----
 server <- function(input, output) {
